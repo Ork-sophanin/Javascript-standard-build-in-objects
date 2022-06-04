@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    const numbers = [1, 0.6, 23, 56, 43, 23, 100];
+
+    const min = numbers.reduce((previousValue, currentValue) => {
+        return previousValue < currentValue
+            ? previousValue
+            : currentValue;
+    });
+    console.log(min);
+</script>
