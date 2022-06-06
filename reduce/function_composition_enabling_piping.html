@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    const double = x => x + x;
+    const triple = x => 3 * x;
+    const quadruple = x => 4 * x;
+
+    const pipe = (...functions) =>
+        initialValue =>
+            functions.reduce(
+                (acc, fn) =>
+                    fn(acc),
+                initialValue
+            );
+
+    const multiply6 = pipe(double, triple);
+    const multiply9 = pipe(triple, triple);
+    const multiply16 = pipe(quadruple, quadruple);
+    const multiply24 = pipe(double, triple, quadruple);
+
+    const six = multiply6(6);
+    const nine = multiply9(9);
+    const sixteen = multiply16(16);
+    const twentyFour = multiply24(10);
+
+    console.log(six, nine, sixteen, twentyFour);
+</script>

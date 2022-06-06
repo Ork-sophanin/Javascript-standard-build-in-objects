@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    const initialValue = ['Alphabet'];
+    const friends = [
+        {
+            name: 'Anna',
+            books: ['Bible', 'Harry Potter'],
+            age: 21
+        },
+        {
+            name: 'Bob',
+            books: ['War and peace', 'Romeo and Juliet'],
+            age: 26
+        },
+        {
+            name: 'Alice',
+            books: ['The Lord of the Rings', 'The Shining'],
+            age: 18
+        }
+    ];
+
+    let allBooks = friends.reduce(function (previousValue, currentValue) {
+        return [
+            ...previousValue,
+            ...currentValue.books
+        ];
+    }, initialValue);
+
+    console.log(allBooks);
+</script>
